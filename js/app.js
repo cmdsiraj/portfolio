@@ -251,7 +251,7 @@ function buildHeroCode(data) {
 // ─── Render: Hero ─────────────────────────────────────────────────────────
 function renderHero(data) {
   const p = data.personal;
-  document.title = p.name + ' — Portfolio';
+  document.title = p.name;
   document.getElementById('nav-name').textContent    = 'Siraj';
   document.getElementById('hero-name').textContent   = p.name;
   document.getElementById('hero-title').textContent  = p.title;
