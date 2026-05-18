@@ -133,6 +133,12 @@ body {
 }
 .logo-bracket { color: var(--cyan); }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .nav-links {
   display: flex;
   gap: 0.25rem;
@@ -930,8 +936,23 @@ main { position: relative; z-index: 1; }
 }
 .footer-note {
   font-size: 0.78rem;
-  color: var(--text-dim);
+  color: var(--text-muted);
   font-family: var(--mono);
+}
+.footer-link {
+  color: var(--cyan);
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity var(--transition);
+}
+.footer-link:hover { opacity: 1; }
+.footer-logo-link { vertical-align: middle; }
+.footer-logo {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  border-radius: 4px;
+  display: inline-block;
 }
 
 /* ─── Tag chips (shared) ─── */
@@ -968,6 +989,7 @@ main { position: relative; z-index: 1; }
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
+  .nav-right { gap: 0.5rem; }
   .about-stats { grid-template-columns: 1fr 1fr; }
 }
 

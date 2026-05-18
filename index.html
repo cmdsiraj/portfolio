@@ -21,18 +21,20 @@
       <span id="nav-name">Portfolio</span>
       <span class="logo-bracket">/&gt;</span>
     </div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact" class="nav-cta">Contact</a></li>
-    </ul>
-    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light mode">
-      <span class="theme-icon">☀</span>
-    </button>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light mode">
+        <span class="theme-icon">☀</span>
+      </button>
+    </div>
     <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -171,7 +173,11 @@
   <!-- Footer -->
   <footer id="footer">
     <p id="footer-text">Built by —</p>
-    <p class="footer-note">Designed &amp; developed with ♥ · Hosted on GitHub Pages</p>
+    <p class="footer-note">
+      Designed &amp; developed with ♥ ·
+      Built with <a href="https://claude.ai/code" target="_blank" rel="noopener" class="footer-link footer-logo-link"><img src="assets/claude-logo.svg" alt="Claude Code" class="footer-logo" /></a> ·
+      Hosted on GitHub Pages
+    </p>
   </footer>
 
   <script src="js/app.js"></script>

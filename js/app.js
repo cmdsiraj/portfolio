@@ -83,8 +83,8 @@ function initCanvas() {
     // Stars
     stars.forEach(s => {
       const twinkle = Math.sin(t * s.twinkleSpeed * 60 + s.twinkleOffset);
-      const a = s.alpha + twinkle * 0.28;
-      const r = s.r + twinkle * 0.3;
+      const a = s.alpha + twinkle * 0.12;
+      const r = s.r + twinkle * 0.15;
       ctx.beginPath();
       ctx.arc(s.x, s.y, Math.max(0.2, r), 0, Math.PI * 2);
       ctx.fillStyle = `rgba(210,230,255,${Math.max(0.08, a)})`;
