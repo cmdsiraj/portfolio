@@ -18,14 +18,14 @@ function initCanvas() {
 
   function buildStars() {
     stars = [];
-    const count = Math.floor((W * H) / 6000);
+    const count = Math.floor((W * H) / 3500);
     for (let i = 0; i < count; i++) {
       stars.push({
         x:             Math.random() * W,
         y:             Math.random() * H,
-        r:             Math.random() * 1.2 + 0.2,
-        alpha:         Math.random() * 0.5 + 0.15,
-        twinkleSpeed:  Math.random() * 0.008 + 0.002,
+        r:             Math.random() * 1.8 + 0.3,
+        alpha:         Math.random() * 0.55 + 0.25,
+        twinkleSpeed:  Math.random() * 0.015 + 0.005,
         twinkleOffset: Math.random() * Math.PI * 2,
       });
     }
@@ -65,15 +65,15 @@ function initCanvas() {
     meteors.push({
       x:     startX,
       y:     -10,
-      vx:    -(Math.random() * 2 + 2),
-      vy:    Math.random() * 2 + 2,
-      len:   Math.random() * 80 + 60,
-      alpha: 0.6,
-      fade:  Math.random() * 0.012 + 0.008,
+      vx:    -(Math.random() * 3 + 2.5),
+      vy:    Math.random() * 3 + 2.5,
+      len:   Math.random() * 120 + 80,
+      alpha: 0.9,
+      fade:  Math.random() * 0.010 + 0.006,
     });
   }
 
-  setInterval(() => { if (Math.random() < 0.4) spawnMeteor(); }, 3500);
+  setInterval(() => { if (Math.random() < 0.7) spawnMeteor(); }, 2000);
 
   let t = 0;
   function draw() {
@@ -82,10 +82,12 @@ function initCanvas() {
 
     // Stars
     stars.forEach(s => {
-      const a = s.alpha + Math.sin(t * s.twinkleSpeed * 60 + s.twinkleOffset) * 0.12;
+      const twinkle = Math.sin(t * s.twinkleSpeed * 60 + s.twinkleOffset);
+      const a = s.alpha + twinkle * 0.28;
+      const r = s.r + twinkle * 0.3;
       ctx.beginPath();
-      ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(200,220,255,${Math.max(0.05, a)})`;
+      ctx.arc(s.x, s.y, Math.max(0.2, r), 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(210,230,255,${Math.max(0.08, a)})`;
       ctx.fill();
     });
 
@@ -158,13 +160,32 @@ function initReveal() {
   });
 }
 
+// ─── Theme toggle ─────────────────────────────────────────────────────────
+function initTheme() {
+  const btn  = document.getElementById('theme-toggle');
+  const icon = btn.querySelector('.theme-icon');
+  const root = document.documentElement;
+
+  const saved = localStorage.getItem('theme') || 'dark';
+  root.setAttribute('data-theme', saved);
+  icon.textContent = saved === 'light' ? '☽' : '☀';
+
+  btn.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    icon.textContent = next === 'light' ? '☽' : '☀';
+  });
+}
+
 // ─── Navbar scroll effect ─────────────────────────────────────────────────
 function initNavbar() {
   const nav = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
+    const isLight = document.documentElement.getAttribute('data-theme') === 'light';
     nav.style.background = window.scrollY > 40
-      ? 'rgba(8,11,18,0.97)'
-      : 'rgba(8,11,18,0.8)';
+      ? (isLight ? 'rgba(240,244,248,0.99)' : 'rgba(8,11,18,0.99)')
+      : (isLight ? 'rgba(240,244,248,0.96)' : 'rgba(8,11,18,0.96)');
   }, { passive: true });
 
   const toggle = document.getElementById('nav-toggle');
@@ -460,6 +481,7 @@ function getSVG(label) {
 // ─── Main ─────────────────────────────────────────────────────────────────
 async function main() {
   initCanvas();
+  initTheme();
   initNavbar();
 
   try {

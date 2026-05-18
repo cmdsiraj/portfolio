@@ -6,7 +6,8 @@
       "Bash(python -c ' *)",
       "mcp__Claude_Preview__preview_start",
       "WebFetch(domain:github.com)",
-      "WebFetch(domain:raw.githubusercontent.com)"
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(ls \"C:\\\\Users\\\\cmdsi\\\\OneDrive\\\\Desktop\\\\My Files\\\\my-projects\\\\portfolio\\\\\")"
     ]
   }
 }
