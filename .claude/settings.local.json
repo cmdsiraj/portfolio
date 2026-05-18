@@ -10,7 +10,9 @@
       "Bash(ls \"C:\\\\Users\\\\cmdsi\\\\OneDrive\\\\Desktop\\\\My Files\\\\my-projects\\\\portfolio\\\\\")",
       "WebSearch",
       "WebFetch(domain:upload.wikimedia.org)",
-      "WebFetch(domain:commons.wikimedia.org)"
+      "WebFetch(domain:commons.wikimedia.org)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "mcp__Claude_in_Chrome__computer"
     ]
   }
 }
