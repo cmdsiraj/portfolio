@@ -97,7 +97,7 @@
         "Per-tick loop: witness enrichment → belief propagation (personality-filtered) → LLM decision call with each NPC's full context (goals, beliefs, nearby characters).",
         "Fully scenario-agnostic: YAML files define worlds independently from the engine, enabling emergent social dynamics without any scripted logic."
       ],
-      "tags": ["Python", "LLM", "Multi-Agent", "Graph", "Game AI", "AI Engineering"],
+      "tags": ["Python", "AWS Bedrock", "LLM", "Multi-Agent", "Graph", "Game AI", "AI Engineering"],
       "domain": "AI Engineering",
       "github": "https://github.com/cmdsiraj/Intelligent-NPC",
       "demo": "",
@@ -122,11 +122,11 @@
       "title": "TenantLens: Rental Transparency Platform",
       "description": "Renter-focused web application that combats rental fraud through community-driven property reviews, scam reporting, and document-verified residency badges.",
       "bullets": [
-        "Document-based residency verification with configurable address-matching thresholds; only renters with matching documentation receive a trusted 'verified stay' badge.",
+        "Azure Document Intelligence extracts and validates address fields from uploaded documents; configurable matching thresholds determine whether a renter earns a trusted 'verified stay' badge.",
         "Production-grade security with Azure Key Vault and Managed Identity; no hardcoded credentials anywhere in the codebase.",
         "Community-driven scam reporting builds a public record of fraudulent listings, giving future renters signal that anonymous review sites can't provide."
       ],
-      "tags": [".NET 10", "C#", "Azure", "Key Vault", "HTML/CSS", "Software Engineering"],
+      "tags": [".NET 10", "C#", "Azure AI Foundry", "Azure Document Intelligence", "Azure Key Vault", "HTML/CSS", "Software Engineering"],
       "domain": "Software Engineering",
       "github": "https://github.com/sirajusf/TenantLens",
       "demo": "",
