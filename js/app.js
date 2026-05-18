@@ -361,20 +361,25 @@ function renderProjects(data) {
     card.className = 'project-card reveal';
     card.dataset.delay = i * 100;
 
-    const ghLink   = proj.github ? `<a href="${proj.github}" target="_blank" rel="noopener" title="GitHub">↗</a>` : '';
-    const demoLink = proj.demo   ? `<a href="${proj.demo}"   target="_blank" rel="noopener" title="Live Demo">⬡</a>` : '';
+    const ghLink      = proj.github ? `<a href="${proj.github}" target="_blank" rel="noopener" title="GitHub">↗</a>` : '';
+    const demoLink    = proj.demo   ? `<a href="${proj.demo}"   target="_blank" rel="noopener" title="Live Demo">⬡</a>` : '';
     const domainBadge = proj.domain ? `<span class="project-domain">${proj.domain}</span>` : '';
+    const statusBadge = proj.status ? `<span class="project-status">${proj.status}</span>` : '';
     const imageHTML   = proj.image  ? `<img class="project-img" src="${proj.image}" alt="${proj.title} screenshot" loading="lazy" />` : '';
+    const bulletsHTML = proj.bullets && proj.bullets.length
+      ? `<ul class="project-bullets">${proj.bullets.map(b => `<li>${b}</li>`).join('')}</ul>`
+      : '';
 
     card.innerHTML = `
       ${imageHTML}
       <div class="project-body">
         <div class="project-top">
-          ${domainBadge}
+          <div class="project-badges">${domainBadge}${statusBadge}</div>
           <div class="project-links">${ghLink}${demoLink}</div>
         </div>
         <div class="project-title">${proj.title}</div>
         <div class="project-desc">${proj.description}</div>
+        ${bulletsHTML}
         <div class="project-tags">
           ${proj.tags.map(t => `<span class="project-tag">${t}</span>`).join('')}
         </div>

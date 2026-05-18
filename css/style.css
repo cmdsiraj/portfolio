@@ -729,6 +729,12 @@ main { position: relative; z-index: 1; }
   border-color: var(--purple);
   background: var(--purple-dim);
 }
+.project-badges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
 .project-domain {
   display: inline-block;
   font-family: var(--mono);
@@ -738,6 +744,19 @@ main { position: relative; z-index: 1; }
   text-transform: uppercase;
   color: var(--cyan);
   opacity: 0.7;
+}
+.project-status {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--yellow, #f0c040);
+  border: 1px solid var(--yellow, #f0c040);
+  border-radius: 4px;
+  padding: 1px 6px;
+  opacity: 0.85;
 }
 
 .project-title {
@@ -749,6 +768,19 @@ main { position: relative; z-index: 1; }
   font-size: 0.875rem;
   color: var(--text-muted);
   line-height: 1.7;
+}
+.project-bullets {
+  margin: 0.6rem 0 0.4rem 0;
+  padding-left: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.project-bullets li {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  list-style: disc;
 }
 .project-tags {
   display: flex;

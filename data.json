@@ -3,7 +3,7 @@
     "name": "Mahammad Siraj Cheruvu",
     "title": "Software Engineer · AI Engineer · Data Engineer",
     "domains": ["Software Engineering", "AI Engineering", "Data Engineering"],
-    "tagline": "I build production software, design intelligent AI systems, and engineer scalable data pipelines — end to end.",
+    "tagline": "I build production software, design intelligent AI systems, and engineer scalable data pipelines, all the way from prototype to production.",
     "location": "Tampa, Florida",
     "email": "mc26@usf.edu",
     "phone": "6562144505",
@@ -18,7 +18,7 @@
       "school": "University of South Florida",
       "location": "Tampa, FL",
       "degree": "Masters in Artificial Intelligence and Business Analytics",
-      "period": "Jan 2025 – Dec 2026",
+      "period": "Jan 2025 - Dec 2026",
       "gpa": "3.88 / 4.0",
       "logo": "assets/usf-logo.png",
       "courses": [
@@ -33,7 +33,7 @@
       "school": "Shiv Nadar University",
       "location": "India",
       "degree": "B.Tech in Computer Science and Engineering",
-      "period": "Aug 2020 – May 2024",
+      "period": "Aug 2020 - May 2024",
       "gpa": "3.16 / 4.0",
       "specialization": "AI/ML",
       "minor": "Mathematics",
@@ -52,7 +52,7 @@
       "role": "Graduate Assistant",
       "company": "University of South Florida",
       "location": "Tampa, FL",
-      "period": "May 2025 – Present",
+      "period": "May 2025 - May 2026",
       "type": "Part-time",
       "bullets": [
         "Collected, cleaned, and maintained departmental data to build Tableau and Power BI analytics dashboards, enabling data-driven reporting for university staff.",
@@ -61,15 +61,28 @@
       "tags": ["Tableau", "Power BI", "Data Analytics"]
     },
     {
+      "role": "Data Engineer",
+      "company": "InnovateK12",
+      "location": "Remote",
+      "period": "Oct 2024 - Dec 2024",
+      "type": "Volunteer",
+      "bullets": [
+        "Built a survey schema mapping service that ingests a survey template alongside sample responses and auto-generates a JSON field mapping, allowing downstream pipeline tasks to extract structured data from raw survey files regardless of format or structure.",
+        "Addressed a core data heterogeneity problem: school district surveys arrive in varying file formats and layouts, and the mapping service abstracts that complexity into a consistent, reusable schema contract.",
+        "Worked within InnovateK12's stakeholder analytics platform, which processes community survey data from K-12 districts to drive insights on student wellbeing, strategic planning, and community engagement."
+      ],
+      "tags": ["Python", "Data Engineering", "ETL", "JSON", "Schema Mapping", "Survey Analytics"]
+    },
+    {
       "role": "Software Development Engineer",
       "company": "EX Squared",
       "location": "Faridabad, India",
-      "period": "Jan 2024 – Jul 2024",
+      "period": "Jan 2024 - Jul 2024",
       "type": "Internship",
       "bullets": [
-        "Led backend development using CLEAN architecture, building RESTful APIs with ASP.NET — reducing integration time by 30%.",
+        "Led backend development using CLEAN architecture, building RESTful APIs with ASP.NET, reducing integration time by 30%.",
         "Designed and deployed an MS SQL database managing 1000+ vendor and expense records with secure access control.",
-        "Developed front-end features with JavaScript ES6 and integrated vendor management, invoice generation, and document signing — improving process efficiency by 25%.",
+        "Developed front-end features with JavaScript ES6 and integrated vendor management, invoice generation, and document signing, improving process efficiency by 25%.",
         "Enabled secure file storage in Azure Blob Storage and integrated PDF generation and automated email features, cutting document turnaround time by 40%."
       ],
       "tags": ["ASP.NET", "MS SQL", "Azure", "JavaScript", "CLEAN Architecture"]
@@ -77,12 +90,27 @@
   ],
   "projects": [
     {
-      "title": "IntelliMove — Talent-to-Role Matching",
-      "description": "AI-powered system that evaluates employee skill profiles against job descriptions using multi-factor scoring — accounting for skill decay, confidence levels, partial category credit, and sentiment analysis from performance reviews.",
+      "title": "Intelligent NPC: LLM-Driven Multi-Agent Simulation",
+      "description": "A Python framework that gives game NPCs autonomous, socially-aware behaviour using LLMs. Each NPC maintains a personal Belief Graph, a weighted knowledge graph where beliefs about other characters decay over time, weaken with each rumour hop, and strengthen through confirmation. A social-memory engine for game AI.",
       "bullets": [
-        "LLM-powered skill normalization via Claude (AWS Bedrock) with hierarchical skill grouping and a decay function that penalizes stale skills over time.",
-        "Confidence scoring aggregated from resumes, manager reviews, and peer feedback, with sentiment modifiers adjusting final match scores.",
-        "Achieved 96.2% fit accuracy on test dataset (9 employees × 5 roles), successfully differentiating managerial vs. IC role requirements."
+        "Each NPC holds a personal Belief Graph where beliefs decay over time, weaken with each gossip hop, and strengthen through confirmation, so rumours and direct witnesses affect behaviour differently.",
+        "Per-tick loop: witness enrichment → belief propagation (personality-filtered) → LLM decision call with each NPC's full context (goals, beliefs, nearby characters).",
+        "Fully scenario-agnostic: YAML files define worlds independently from the engine, enabling emergent social dynamics without any scripted logic."
+      ],
+      "tags": ["Python", "LLM", "Multi-Agent", "Graph", "Game AI", "AI Engineering"],
+      "domain": "AI Engineering",
+      "github": "https://github.com/cmdsiraj/Intelligent-NPC",
+      "demo": "",
+      "status": "In Progress",
+      "featured": true
+    },
+    {
+      "title": "IntelliMove: Talent-to-Role Matching",
+      "description": "AI-powered system that evaluates employee skill profiles against job descriptions using multi-factor scoring that accounts for skill decay, confidence levels, partial category credit, and sentiment analysis from performance reviews.",
+      "bullets": [
+        "Scoring across four dimensions: skill relevance with staleness decay, confidence aggregated from resumes and reviews, partial category credit, and sentiment modifiers from performance review text.",
+        "Used Claude (AWS Bedrock) for skill normalisation and hierarchical grouping, handling synonyms and skill variants automatically.",
+        "96.2% fit accuracy on a test dataset of 9 employees × 5 roles, correctly separating managerial vs. IC requirements."
       ],
       "tags": ["AWS Bedrock", "Claude", "Python", "Pandas", "LLM", "AI Engineering"],
       "domain": "AI Engineering",
@@ -91,12 +119,12 @@
       "featured": true
     },
     {
-      "title": "TenantLens — Rental Transparency Platform",
+      "title": "TenantLens: Rental Transparency Platform",
       "description": "Renter-focused web application that combats rental fraud through community-driven property reviews, scam reporting, and document-verified residency badges.",
       "bullets": [
-        "Built with .NET 10 (C#) and Azure — uses Azure Key Vault and Managed Identity for secure credential management in production.",
-        "Document-based residency verification with configurable address-matching thresholds to issue trusted 'verified stay' badges.",
-        "Addresses a real gap in the rental market: trustworthy, renter-reported property intelligence to counter fraudulent listings."
+        "Document-based residency verification with configurable address-matching thresholds; only renters with matching documentation receive a trusted 'verified stay' badge.",
+        "Production-grade security with Azure Key Vault and Managed Identity; no hardcoded credentials anywhere in the codebase.",
+        "Community-driven scam reporting builds a public record of fraudulent listings, giving future renters signal that anonymous review sites can't provide."
       ],
       "tags": [".NET 10", "C#", "Azure", "Key Vault", "HTML/CSS", "Software Engineering"],
       "domain": "Software Engineering",
@@ -105,12 +133,12 @@
       "featured": true
     },
     {
-      "title": "Bus Headway — Real-Time Stream Processing",
+      "title": "Bus Headway: Real-Time Stream Processing",
       "description": "Distributed streaming pipeline that monitors transit service intervals in real time, detecting bus bunching and service gaps to trigger live operational alerts.",
       "bullets": [
-        "Kafka–Spark Structured Streaming pipeline with stateful event-time aggregations using Kappa Architecture for continuous stream processing.",
-        "Containerized multi-worker deployment via Docker Compose — Spark, Kafka, and MongoDB running as fault-tolerant, low-latency services.",
-        "Hourly performance metrics aggregation with anomaly detection that flags disruptions before they compound into larger delays."
+        "Kafka + Spark Structured Streaming with stateful event-time aggregations and Kappa Architecture: no batch layer, continuous recalculation as position events arrive.",
+        "Full stack containerised in Docker Compose: Spark workers, Kafka brokers, Zookeeper, and MongoDB running as fault-tolerant services.",
+        "Real-time anomaly detection flags bunching as it forms; hourly MongoDB aggregations surface recurring problem routes for longer-term scheduling."
       ],
       "tags": ["Apache Kafka", "Spark Streaming", "MongoDB", "Docker", "PySpark", "Data Engineering"],
       "domain": "Data Engineering",
@@ -119,12 +147,12 @@
       "featured": true
     },
     {
-      "title": "ViGen — Story to Scene Video Pipeline",
-      "description": "Transforms a user-guided concept (tone, genre, topic, scene count) into a complete narrated video — story generation, scene planning, video synthesis, and audio all automated end-to-end.",
+      "title": "ViGen: Story to Scene Video Pipeline",
+      "description": "Transforms a user-guided concept (tone, genre, topic, scene count) into a complete narrated video. Story generation, scene planning, video synthesis, and audio are all automated from start to finish.",
       "bullets": [
-        "LangChain multi-agent pipeline: StoryAgent generates structured scene scripts, SceneAgent plans visuals, with async video and audio generation running in parallel.",
-        "Amazon Nova Reel (AWS Bedrock) for AI video synthesis + Amazon Polly for narration — assembled into final MP4 via FFmpeg with per-scene muxing.",
-        "Includes automatic prompt softening logic to handle content filter edge cases, ensuring reliable generation across diverse story themes."
+        "LangChain multi-agent pipeline: StoryAgent scripts scenes, SceneAgent plans visuals, Amazon Nova Reel (Bedrock) generates video and Polly handles narration, all assembled into MP4 via FFmpeg.",
+        "Async generation across video and audio keeps latency low; assets staged in S3 enable partial restarts without regenerating the full video.",
+        "Automatic prompt softening logic rewrites requests likely to hit content filters before retrying, ensuring reliable output across diverse story themes."
       ],
       "tags": ["AWS Bedrock", "LangChain", "Amazon Polly", "FFmpeg", "AWS S3", "Python", "AI Engineering"],
       "domain": "AI Engineering",
@@ -133,12 +161,12 @@
       "featured": true
     },
     {
-      "title": "LLM-Agent — Modular AI Agent Framework",
-      "description": "LLM-agnostic agent framework that lets you build reasoning agents with tools, memory, and RAG — swap between Gemini, Ollama, or Groq with no code changes.",
+      "title": "LLM-Agent: Modular AI Agent Framework",
+      "description": "LLM-agnostic agent framework for building reasoning agents with tools, memory, and RAG. Swap between Gemini, Ollama, or Groq with no code changes.",
       "bullets": [
-        "Multi-LLM support (Google Gemini, Ollama, Groq) via a plug-and-play provider abstraction — cloud or local deployment, same interface.",
-        "Lightweight RAG using FAISS + SentenceTransformers for vector retrieval, with built-in tools: Python execution, Serper web search, web scraping, and file I/O.",
-        "Modular architecture with configurable agent roles, goals, and backstories — deploy as a FastAPI service with SQLite persistence, hosted on Render."
+        "Provider abstraction layer supports Gemini, Ollama, and Groq behind one interface; swap models with a config change, no code changes.",
+        "Built-in tools: Python execution, Serper web search, scraping, and file I/O. RAG via FAISS + SentenceTransformers for persistent knowledge retrieval.",
+        "Deployed as a FastAPI service on Render with SQLite persistence; works cloud or fully offline via Ollama."
       ],
       "tags": ["Python", "FAISS", "RAG", "Gemini", "Ollama", "Groq", "FastAPI", "AI Engineering"],
       "domain": "AI Engineering",
@@ -147,12 +175,12 @@
       "featured": true
     },
     {
-      "title": "Stock Vision — ML Stock Forecasting Platform",
+      "title": "Stock Vision: ML Stock Forecasting Platform",
       "description": "Full-stack web app that forecasts stock prices using three ML models and Twitter sentiment analysis, delivering actionable BUY/SELL signals on a live dashboard of 20 major stocks.",
       "bullets": [
-        "Three forecasting models per stock: LSTM neural networks, Linear Regression with trend analysis, and ARIMA time-series — signals synthesized into consensus recommendations.",
-        "Sentiment pipeline scrapes Twitter with snscrape, scores tweets via TextBlob and spaCy, and weights sentiment as a modifier on model output.",
-        "React 18 frontend (Tailwind CSS, Highcharts, Plotly, D3.js) over a Flask backend — tracks TSLA, NVDA, AAPL, GOOG, AMZN and 15 more with 7-day forecasts."
+        "Three models per stock (LSTM, Linear Regression, and ARIMA) with signals synthesised into a consensus BUY/SELL recommendation to reduce single-model bias.",
+        "Sentiment pipeline: snscrape + TextBlob + spaCy scores Twitter data and feeds a weighted modifier into the final score, catching momentum shifts price data misses.",
+        "React 18 frontend (Highcharts, Plotly, D3.js) over Flask, delivering 7-day forecasts for 20 stocks including TSLA, NVDA, AAPL, and AMZN."
       ],
       "tags": ["React 18", "Flask", "LSTM", "TensorFlow", "ARIMA", "Sentiment Analysis", "Python"],
       "domain": "SE + AI + Data",
