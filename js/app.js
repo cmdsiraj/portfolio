@@ -449,11 +449,11 @@ function renderContact(data) {
   const container = document.getElementById('contact-links');
   if (!container) return;
   const links = [
-    { href: `mailto:${p.email}`, icon: '✉', label: p.email },
-    { href: p.linkedin, icon: 'in', label: 'LinkedIn' },
-    { href: p.github,   icon: '⌥', label: 'GitHub'  },
-    { href: `tel:${p.phone}`, icon: '☏', label: p.phone },
-  ].filter(l => l.href && !l.href.includes('undefined'));
+    p.email    && { href: `mailto:${p.email}`, icon: '✉', label: p.email },
+    p.linkedin && { href: p.linkedin,          icon: 'in', label: 'LinkedIn' },
+    p.github   && { href: p.github,            icon: '⌥', label: 'GitHub'   },
+    p.phone    && { href: `tel:${p.phone}`,    icon: '☏', label: p.phone    },
+  ].filter(Boolean);
 
   links.forEach(l => {
     const a = document.createElement('a');
