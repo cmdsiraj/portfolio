@@ -447,6 +447,7 @@ function renderCerts(data) {
 function renderContact(data) {
   const p = data.personal;
   const container = document.getElementById('contact-links');
+  if (!container) return;
   const links = [
     { href: `mailto:${p.email}`, icon: '✉', label: p.email },
     { href: p.linkedin, icon: 'in', label: 'LinkedIn' },
@@ -469,8 +470,9 @@ function renderContact(data) {
 
 // ─── Render: Footer ───────────────────────────────────────────────────────
 function renderFooter(data) {
-  document.getElementById('footer-text').textContent =
-    `Built by ${data.personal.name}`;
+  const el = document.getElementById('footer-text');
+  if (!el) return;
+  el.textContent = `Built by ${data.personal.name}`;
 }
 
 // ─── SVG icons (inline, no external dep) ────────────────────────────────
