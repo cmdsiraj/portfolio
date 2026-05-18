@@ -39,14 +39,11 @@
       "minor": "Mathematics",
       "logo": "assets/snu-logo.png",
       "courses": [
-        "Image Processing and it's Applications",
+        "Artificial Intelligence",
         "Computer Vision",
         "Natural Language Processing",
-        "Introduction to Probability and Statistics",
-        "Artificial Intelligence",
-        "Linear Algebra",
-        "Desing and Analysis of Algorithms",
-        "Data Mining and Warehousing"
+        "Data Mining and Warehousing",
+        "Design and Analysis of Algorithms"
       ]
     }
   ],

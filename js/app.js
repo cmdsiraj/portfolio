@@ -1,6 +1,6 @@
 /* ─── Portfolio App — data.json driven ─── */
 
-const DATA_URL = './data.json';
+const DATA_URL = `./data.json?v=${Date.now()}`;
 
 // ─── Space Background ─────────────────────────────────────────────────────
 function initCanvas() {
