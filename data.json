@@ -8,11 +8,11 @@
     "email": "mc26@usf.edu",
     "phone": "6562144505",
     "linkedin": "https://linkedin.com/in/mahammad-siraj-cheruvu",
-    "github": "https://github.com/mahammad-siraj",
+    "github": "https://github.com/cmdsiraj",
     "avatar": "assets/avatar.jpg",
     "resumePdf": "assets/resume.pdf"
   },
-  "about": "I'm a graduate student in AI and Business Analytics at USF (GPA 3.88) who operates across three domains: I engineer reliable software — REST APIs, clean backend architecture, and full-stack features; I build AI systems — multi-agent LLM pipelines, RAG frameworks, and production-grade ML workflows; and I design data infrastructure — real-time Kafka/Spark ETL pipelines, analytics dashboards, and scalable storage solutions. My goal is always the same: turn complex problems into working, production-quality systems.",
+  "about": "I'm a graduate student in AI and Business Analytics at USF (GPA 3.88) who operates across three domains: I engineer reliable software - REST APIs, clean backend architecture, and full-stack features; I build AI systems - multi-agent LLM pipelines, RAG frameworks, and production-grade ML workflows; and I design data infrastructure - real-time Kafka/Spark ETL pipelines, analytics dashboards, and scalable storage solutions. My goal is always the same: turn complex problems into working, production-quality systems.",
   "education": [
     {
       "school": "University of South Florida",
@@ -38,7 +38,16 @@
       "specialization": "AI/ML",
       "minor": "Mathematics",
       "logo": "assets/snu-logo.png",
-      "courses": []
+      "courses": [
+        "Image Processing and it's Applications",
+        "Computer Vision",
+        "Natural Language Processing",
+        "Introduction to Probability and Statistics",
+        "Artificial Intelligence",
+        "Linear Algebra",
+        "Desing and Analysis of Algorithms",
+        "Data Mining and Warehousing"
+      ]
     }
   ],
   "experience": [
