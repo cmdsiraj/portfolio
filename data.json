@@ -12,14 +12,14 @@
     "avatar": "assets/avatar.jpg",
     "resumePdf": "assets/resume.pdf"
   },
-  "about": "I'm a graduate student in AI and Business Analytics at USF (GPA 3.88) who operates across three domains: I engineer reliable software - REST APIs, clean backend architecture, and full-stack features; I build AI systems - multi-agent LLM pipelines, RAG frameworks, and production-grade ML workflows; and I design data infrastructure - real-time Kafka/Spark ETL pipelines, analytics dashboards, and scalable storage solutions. My goal is always the same: turn complex problems into working, production-quality systems.",
+  "about": "I'm a graduate student in AI and Business Analytics at USF (GPA 3.93) who operates across three domains: I engineer reliable software - REST APIs, clean backend architecture, and full-stack features; I build AI systems - multi-agent LLM pipelines, RAG frameworks, and production-grade ML workflows; and I design data infrastructure - real-time Kafka/Spark ETL pipelines, analytics dashboards, and scalable storage solutions. My goal is always the same: turn complex problems into working, production-quality systems.",
   "education": [
     {
       "school": "University of South Florida",
       "location": "Tampa, FL",
       "degree": "Masters in Artificial Intelligence and Business Analytics",
       "period": "Jan 2025 - Dec 2026",
-      "gpa": "3.88 / 4.0",
+      "gpa": "3.93 / 4.0",
       "logo": "assets/usf-logo.png",
       "courses": [
         "Machine Learning",
