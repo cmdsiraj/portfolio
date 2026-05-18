@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Loading…</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Grid background canvas -->
+  <canvas id="grid-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-logo">
+      <span class="logo-bracket">&lt;</span>
+      <span id="nav-name">Portfolio</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#certifications">Certifications</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#skills" class="mobile-link">Skills</a></li>
+      <li><a href="#experience" class="mobile-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-link">Projects</a></li>
+      <li><a href="#education" class="mobile-link">Education</a></li>
+      <li><a href="#certifications" class="mobile-link">Certifications</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <main>
+    <!-- ─── HERO ─── -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-greeting reveal">Hi, I'm</p>
+        <h1 class="hero-name reveal" id="hero-name">—</h1>
+        <h2 class="hero-title reveal" id="hero-title">—</h2>
+        <p class="hero-tagline reveal" id="hero-tagline">—</p>
+        <div class="hero-actions reveal">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+        </div>
+        <div class="hero-social reveal" id="hero-social"></div>
+      </div>
+      <div class="hero-visual">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="hero-card glass reveal">
+          <div class="hero-card-row">
+            <span class="dot dot-red"></span>
+            <span class="dot dot-yellow"></span>
+            <span class="dot dot-green"></span>
+          </div>
+          <pre id="hero-code" class="hero-code-block"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── ABOUT ─── -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">01. About Me</span>
+          <h2 class="section-title">Who I Am</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p id="about-text">—</p>
+            <a id="resume-link" href="#" class="btn btn-primary" style="display:none" target="_blank" rel="noopener">
+              Download Resume
+            </a>
+          </div>
+          <div class="about-stats reveal" id="about-stats"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── SKILLS ─── -->
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">02. Skills</span>
+          <h2 class="section-title">What I Work With</h2>
+        </div>
+        <div id="skills-container" class="skills-grid reveal"></div>
+      </div>
+    </section>
+
+    <!-- ─── EXPERIENCE ─── -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">03. Experience</span>
+          <h2 class="section-title">Where I've Worked</h2>
+        </div>
+        <div id="experience-container" class="timeline"></div>
+      </div>
+    </section>
+
+    <!-- ─── PROJECTS ─── -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">04. Projects</span>
+          <h2 class="section-title">Things I've Built</h2>
+        </div>
+        <div id="projects-container" class="projects-grid"></div>
+      </div>
+    </section>
+
+    <!-- ─── EDUCATION ─── -->
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">05. Education</span>
+          <h2 class="section-title">Academic Background</h2>
+        </div>
+        <div id="education-container" class="edu-grid"></div>
+      </div>
+    </section>
+
+    <!-- ─── CERTIFICATIONS ─── -->
+    <section id="certifications" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">06. Certifications</span>
+          <h2 class="section-title">Credentials</h2>
+        </div>
+        <div id="certs-container" class="certs-grid reveal"></div>
+      </div>
+    </section>
+
+    <!-- ─── CONTACT ─── -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">07. Contact</span>
+          <h2 class="section-title">Get In Touch</h2>
+        </div>
+        <div class="contact-content reveal">
+          <p class="contact-sub">Whether it's an opportunity, a collaboration, or just a conversation — my inbox is open.</p>
+          <div id="contact-links" class="contact-links"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p id="footer-text">Built by —</p>
+    <p class="footer-note">Designed &amp; developed with ♥ · Hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

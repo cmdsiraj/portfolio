@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/cmdsi/OneDrive/Desktop/My Files/Resume/Masters/April 2026/Prana Tree/**)",
+      "Bash(pandoc \"Mahammad Siraj Cheruvu.docx\" -t plain)",
+      "Bash(python -c ' *)",
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)"
+    ]
+  }
+}
