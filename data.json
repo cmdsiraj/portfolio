@@ -100,7 +100,7 @@
       "tags": ["Python", "AWS Bedrock", "LLM", "Multi-Agent", "Graph", "Game AI", "AI Engineering"],
       "domain": "AI Engineering",
       "github": "https://github.com/cmdsiraj/Intelligent-NPC",
-      "demo": "",
+      "demo": "assets/npc_project_ss.png",
       "status": "In Progress",
       "featured": true
     },
