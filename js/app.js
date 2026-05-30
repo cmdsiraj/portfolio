@@ -230,7 +230,7 @@ function buildHeroCode(data) {
     `<span class="key">class</span> <span class="str">Engineer</span><span class="punct">:</span>`,
     `    name<span class="punct">:</span>     <span class="key">str</span>   <span class="punct">=</span> <span class="str">"${firstName}"</span>`,
     `    location<span class="punct">:</span> <span class="key">str</span>   <span class="punct">=</span> <span class="str">"${p.location}"</span>`,
-    `    gpa<span class="punct">:</span>      <span class="key">float</span> <span class="punct">=</span> <span class="num">3.88</span>`,
+    `    gpa<span class="punct">:</span>      <span class="key">float</span> <span class="punct">=</span> <span class="num">3.93</span>`,
     `    domains<span class="punct">:</span>  <span class="key">list</span>  <span class="punct">= [</span>${domainList}<span class="punct">]</span>`,
     `    open_to<span class="punct">:</span>  <span class="key">bool</span>  <span class="punct">=</span> <span class="num">True</span>`,
   ];
