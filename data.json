@@ -1,10 +1,13 @@
 {
   "personal": {
     "name": "Mahammad Siraj Cheruvu",
+    "shortName": "Siraj",
     "title": "Software Engineer · AI Engineer · Data Engineer",
     "domains": ["Software Engineering", "AI Engineering", "Data Engineering"],
     "tagline": "I build production software, design intelligent AI systems, and engineer scalable data pipelines, all the way from prototype to production.",
     "location": "Tampa, Florida",
+    "gpa": "3.93",
+    "openToWork": true,
     "email": "mc26@usf.edu",
     "phone": "",
     "linkedin": "https://linkedin.com/in/mahammad-siraj-cheruvu",

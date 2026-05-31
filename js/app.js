@@ -230,9 +230,9 @@ function buildHeroCode(data) {
     `<span class="key">class</span> <span class="str">Engineer</span><span class="punct">:</span>`,
     `    name<span class="punct">:</span>     <span class="key">str</span>   <span class="punct">=</span> <span class="str">"${firstName}"</span>`,
     `    location<span class="punct">:</span> <span class="key">str</span>   <span class="punct">=</span> <span class="str">"${p.location}"</span>`,
-    `    gpa<span class="punct">:</span>      <span class="key">float</span> <span class="punct">=</span> <span class="num">3.93</span>`,
+    `    gpa<span class="punct">:</span>      <span class="key">float</span> <span class="punct">=</span> <span class="num">${p.gpa}</span>`,
     `    domains<span class="punct">:</span>  <span class="key">list</span>  <span class="punct">= [</span>${domainList}<span class="punct">]</span>`,
-    `    open_to<span class="punct">:</span>  <span class="key">bool</span>  <span class="punct">=</span> <span class="num">True</span>`,
+    `    open_to<span class="punct">:</span>  <span class="key">bool</span>  <span class="punct">=</span> <span class="num">${p.openToWork ? 'True' : 'False'}</span>`,
   ];
 
   const el = document.getElementById('hero-code');
@@ -252,7 +252,7 @@ function buildHeroCode(data) {
 function renderHero(data) {
   const p = data.personal;
   document.title = p.name;
-  document.getElementById('nav-name').textContent    = 'Siraj';
+  document.getElementById('nav-name').textContent    = p.shortName;
   document.getElementById('hero-name').textContent   = p.name;
   document.getElementById('hero-title').textContent  = p.title;
   document.getElementById('hero-tagline').textContent= p.tagline;
@@ -297,7 +297,7 @@ function renderAbout(data) {
 
   const statsEl = document.getElementById('about-stats');
   const stats = [
-    { value: '3.88', label: 'Masters GPA' },
+    { value: data.personal.gpa, label: 'Masters GPA' },
     { value: `${data.experience.length}+`, label: 'Roles' },
     { value: `${data.projects.length}+`, label: 'Projects' },
     { value: `${data.certifications.length}+`, label: 'Certs' },
